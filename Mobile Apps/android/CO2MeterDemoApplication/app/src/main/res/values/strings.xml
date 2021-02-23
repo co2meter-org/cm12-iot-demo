@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CO2 Meter Demo Application</string>
+    <string name="tab_text_1">WiFi</string>
+    <string name="tab_text_2">BLE</string>
+    <string name="tab_text_3">IoT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_ble_fragment">BLE Fragment</string>
+    <string name="hello_wifi_fragment">WiFi Fragment</string>
+    <string name="hello_iot_fragment">IoT Fragment</string>
+</resources>

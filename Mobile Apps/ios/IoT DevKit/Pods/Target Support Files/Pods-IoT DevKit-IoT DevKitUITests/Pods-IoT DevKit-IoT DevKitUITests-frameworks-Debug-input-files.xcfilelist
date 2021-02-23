@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-IoT DevKit-IoT DevKitUITests/Pods-IoT DevKit-IoT DevKitUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework
+${BUILT_PRODUCTS_DIR}/AWSIoT/AWSIoT.framework

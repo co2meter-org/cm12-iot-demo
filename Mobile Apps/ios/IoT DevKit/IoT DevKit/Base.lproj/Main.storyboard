@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WiFi-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="WiFiViewController" customModule="IoT_DevKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wof-Rw-6fy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7e-zz-NTK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                        <state key="normal" title="CO2"/>
+                                        <connections>
+                                            <action selector="getWiFiCO2:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Qq3-dI-dKY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ppm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFB-IK-LKv">
+                                        <rect key="frame" x="0.0" y="59" width="414" height="59.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-1b-dEt">
+                                        <rect key="frame" x="0.0" y="118.5" width="414" height="59"/>
+                                        <state key="normal" title="Temperature"/>
+                                        <connections>
+                                            <action selector="getWiFiTemperature:" destination="9pv-A4-QxB" eventType="touchUpInside" id="d3p-NE-3Kz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 °" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bi-l5-AhZ">
+                                        <rect key="frame" x="0.0" y="177.5" width="414" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnu-zl-phO">
+                                        <rect key="frame" x="0.0" y="236.5" width="414" height="59.5"/>
+                                        <state key="normal" title="Pressure"/>
+                                        <connections>
+                                            <action selector="getWiFiPressure:" destination="9pv-A4-QxB" eventType="touchUpInside" id="b3P-eR-NcD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 hPa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYd-br-bkO">
+                                        <rect key="frame" x="0.0" y="296" width="414" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-LV-gWl">
+                                        <rect key="frame" x="0.0" y="355" width="414" height="59"/>
+                                        <state key="normal" title="Humidity"/>
+                                        <connections>
+                                            <action selector="getWiFiHumidity:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wLH-0O-7gI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-pW-Vm5">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9c-je-pTh">
+                                        <rect key="frame" x="0.0" y="473" width="414" height="59.5"/>
+                                        <state key="normal" title="Battery"/>
+                                        <connections>
+                                            <action selector="getWiFiBatteryValues:" destination="9pv-A4-QxB" eventType="touchUpInside" id="4gr-gK-rxw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3Y-Ge-ikd">
+                                        <rect key="frame" x="0.0" y="532.5" width="414" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMW-cB-k6x">
+                                        <rect key="frame" x="0.0" y="591.5" width="414" height="59"/>
+                                        <state key="normal" title="Get All"/>
+                                        <connections>
+                                            <action selector="getWiFiAllValues:" destination="9pv-A4-QxB" eventType="touchUpInside" id="sDZ-Cg-4mn"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eks-dy-PBq">
+                                        <rect key="frame" x="0.0" y="650.5" width="414" height="59.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEz-cj-8Jf">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="59.5"/>
+                                                <state key="normal" title="Zero"/>
+                                                <connections>
+                                                    <action selector="zeroCalibrate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dOT-uI-nRM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNS-bQ-0Vz">
+                                                <rect key="frame" x="138" y="0.0" width="138" height="59.5"/>
+                                                <state key="normal" title="Ambient"/>
+                                                <connections>
+                                                    <action selector="ambientCalibrate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ojj-p1-hgn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ1-vH-Lzc">
+                                                <rect key="frame" x="276" y="0.0" width="138" height="59.5"/>
+                                                <state key="normal" title="Target"/>
+                                                <connections>
+                                                    <action selector="targetCalibrate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gU8-kk-IKD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGJ-4J-pMf">
+                                        <rect key="frame" x="0.0" y="710" width="414" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wof-Rw-6fy" firstAttribute="width" secondItem="PQr-Ze-W5v" secondAttribute="width" id="85q-xA-R0z"/>
+                            <constraint firstItem="Wof-Rw-6fy" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="EZS-7m-R8H"/>
+                            <constraint firstItem="Wof-Rw-6fy" firstAttribute="height" secondItem="PQr-Ze-W5v" secondAttribute="height" id="YfC-6i-6Im"/>
+                            <constraint firstItem="Wof-Rw-6fy" firstAttribute="centerY" secondItem="PQr-Ze-W5v" secondAttribute="centerY" id="vVG-9D-sfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WiFi" selectedImage="wifi" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="wifiBatteryLabel" destination="H3Y-Ge-ikd" id="iDR-Jy-Qbn"/>
+                        <outlet property="wifiCo2Label" destination="tFB-IK-LKv" id="dQq-Qo-IMx"/>
+                        <outlet property="wifiHumidityLabel" destination="9s4-pW-Vm5" id="coJ-8S-MgB"/>
+                        <outlet property="wifiPressureLabel" destination="uYd-br-bkO" id="kDb-eH-euF"/>
+                        <outlet property="wifiTemperatureLabel" destination="9bi-l5-AhZ" id="Ync-0F-iAP"/>
+                        <outlet property="wifiTimestampLabel" destination="VGJ-4J-pMf" id="kg6-bB-i8F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--IoT-->
+        <scene sceneID="5wV-6a-VtS">
+            <objects>
+                <viewController id="cef-QR-peW" customClass="IoTViewController" customModule="IoT_DevKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WJP-Tk-IRq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hRM-4F-OJE">
+                                <rect key="frame" x="8" y="44" width="398" height="769"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-1p-M1X">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="64"/>
+                                        <state key="normal" title="CO2"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ppm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2j-7o-mdX">
+                                        <rect key="frame" x="0.0" y="64" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asf-cp-9dr">
+                                        <rect key="frame" x="0.0" y="128" width="398" height="64.5"/>
+                                        <state key="normal" title="Temperature"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 °" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="git-gH-xZz">
+                                        <rect key="frame" x="0.0" y="192.5" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPj-s9-RZJ">
+                                        <rect key="frame" x="0.0" y="256.5" width="398" height="64"/>
+                                        <state key="normal" title="Pressure"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 hPa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34d-uD-5JV">
+                                        <rect key="frame" x="0.0" y="320.5" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPg-e8-Lc7">
+                                        <rect key="frame" x="0.0" y="384.5" width="398" height="64"/>
+                                        <state key="normal" title="Humidity"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-R7-u3V">
+                                        <rect key="frame" x="0.0" y="448.5" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lW-wM-Brl">
+                                        <rect key="frame" x="0.0" y="512.5" width="398" height="64.5"/>
+                                        <state key="normal" title="Battery"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acV-3n-dnV">
+                                        <rect key="frame" x="0.0" y="577" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzw-62-5ey">
+                                        <rect key="frame" x="0.0" y="641" width="398" height="64"/>
+                                        <state key="normal" title="Timestamp"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeX-Vk-mSp">
+                                        <rect key="frame" x="0.0" y="705" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hRM-4F-OJE" firstAttribute="width" secondItem="tdq-gf-BUG" secondAttribute="width" constant="-16" id="7w2-pj-tTx"/>
+                            <constraint firstItem="hRM-4F-OJE" firstAttribute="centerX" secondItem="tdq-gf-BUG" secondAttribute="centerX" id="9VH-zG-qp5"/>
+                            <constraint firstItem="hRM-4F-OJE" firstAttribute="centerY" secondItem="tdq-gf-BUG" secondAttribute="centerY" id="M8c-QF-DA0"/>
+                            <constraint firstItem="hRM-4F-OJE" firstAttribute="height" secondItem="tdq-gf-BUG" secondAttribute="height" id="zxf-qf-3il"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tdq-gf-BUG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="IoT" selectedImage="icloud" catalog="system" id="OUd-2C-Qz3"/>
+                    <connections>
+                        <outlet property="iotBatteryLabel" destination="acV-3n-dnV" id="msF-Q0-2tv"/>
+                        <outlet property="iotCo2Label" destination="Q2j-7o-mdX" id="Qyw-sT-jC0"/>
+                        <outlet property="iotHumidityLabel" destination="YM0-R7-u3V" id="gzc-f2-Fds"/>
+                        <outlet property="iotPressureLabel" destination="34d-uD-5JV" id="9GF-hZ-VEo"/>
+                        <outlet property="iotTemperatureLabel" destination="git-gH-xZz" id="YTf-3l-Le8"/>
+                        <outlet property="iotTimestampLabel" destination="CeX-Vk-mSp" id="zCu-vA-rYb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVM-4z-yU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="-63"/>
+        </scene>
+        <!--Bluetooth-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="BTViewController" customModule="IoT_DevKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iQ9-Np-wdz">
+                                <rect key="frame" x="8" y="44" width="398" height="769"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-ha-Lxg">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="64"/>
+                                        <state key="normal" title="CO2"/>
+                                        <connections>
+                                            <action selector="getBtCo2:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Kv5-48-oBu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ppm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPy-b6-92y">
+                                        <rect key="frame" x="0.0" y="64" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWe-2m-9nO">
+                                        <rect key="frame" x="0.0" y="128" width="398" height="64.5"/>
+                                        <state key="normal" title="Temperature"/>
+                                        <connections>
+                                            <action selector="getBtTemperature:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="DgT-26-bNE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 °" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMQ-GR-0NT">
+                                        <rect key="frame" x="0.0" y="192.5" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me8-ET-tkQ">
+                                        <rect key="frame" x="0.0" y="256.5" width="398" height="64"/>
+                                        <state key="normal" title="Pressure"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 hPa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLb-2I-84V">
+                                        <rect key="frame" x="0.0" y="320.5" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmC-U7-ZMq">
+                                        <rect key="frame" x="0.0" y="384.5" width="398" height="64"/>
+                                        <state key="normal" title="Humidity"/>
+                                        <connections>
+                                            <action selector="getBtHumidity:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="huG-ZL-z1v"/>
+                                            <action selector="getBtPressure:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="0cQ-i2-1NA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hd-ux-uRA">
+                                        <rect key="frame" x="0.0" y="448.5" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67L-wL-bmU">
+                                        <rect key="frame" x="0.0" y="512.5" width="398" height="64.5"/>
+                                        <state key="normal" title="Battery"/>
+                                        <connections>
+                                            <action selector="getBtBattery:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="gTn-pD-4LB"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRV-sM-d0j">
+                                        <rect key="frame" x="0.0" y="577" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-fe-iNW">
+                                        <rect key="frame" x="0.0" y="641" width="398" height="64"/>
+                                        <state key="normal" title="Get All"/>
+                                        <connections>
+                                            <action selector="getBtAllValues:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="fbg-IA-VEW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6H-iH-IgJ">
+                                        <rect key="frame" x="0.0" y="705" width="398" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iQ9-Np-wdz" firstAttribute="height" secondItem="O1u-W8-tvY" secondAttribute="height" id="Cs9-yO-jbZ"/>
+                            <constraint firstItem="iQ9-Np-wdz" firstAttribute="width" secondItem="O1u-W8-tvY" secondAttribute="width" constant="-16" id="biA-08-uPg"/>
+                            <constraint firstItem="iQ9-Np-wdz" firstAttribute="centerY" secondItem="O1u-W8-tvY" secondAttribute="centerY" id="sjg-F1-oAB"/>
+                            <constraint firstItem="iQ9-Np-wdz" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="yXM-Xr-ZgS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bluetooth" selectedImage="antenna.radiowaves.left.and.right" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="btBatteryLabel" destination="jRV-sM-d0j" id="7BK-XE-GIR"/>
+                        <outlet property="btCo2Label" destination="mPy-b6-92y" id="dQK-iq-leR"/>
+                        <outlet property="btHumidityLabel" destination="9Hd-ux-uRA" id="iWi-iH-9As"/>
+                        <outlet property="btPressureLabel" destination="jLb-2I-84V" id="Bsu-Yu-D4P"/>
+                        <outlet property="btTemperatureLabel" destination="jLb-2I-84V" id="6Rx-gx-6pX"/>
+                        <outlet property="btTimestampLabel" destination="p6H-iH-IgJ" id="0qh-ym-dht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="cef-QR-peW" kind="relationship" relationship="viewControllers" id="VW2-ih-W08"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="antenna.radiowaves.left.and.right" catalog="system" width="128" height="109"/>
+        <image name="icloud" catalog="system" width="128" height="88"/>
+        <image name="wifi" catalog="system" width="128" height="92"/>
+    </resources>
+</document>

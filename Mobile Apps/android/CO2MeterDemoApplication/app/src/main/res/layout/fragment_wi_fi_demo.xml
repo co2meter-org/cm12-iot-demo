@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.WiFiDemoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:backgroundTint="@color/colorPrimary"
+        android:weightSum="15">
+
+        <Button
+            android:id="@+id/wifi_fragment_all_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Get All"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/colorPrimary"></Button>
+
+        <Button
+            android:id="@+id/wifi_fragment_co2_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
+            android:text="CO2"></Button>
+
+        <TextView
+            android:id="@+id/wifi_fragment_co2_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"
+            android:layout_gravity="center"></TextView>
+
+        <Button
+            android:id="@+id/wifi_fragment_temperature_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Temperature"
+            android:textColor="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"></Button>
+
+        <TextView
+            android:id="@+id/wifi_fragment_temperature_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"></TextView>
+
+        <Button
+            android:id="@+id/wifi_fragment_pressure_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Pressure"
+            android:textColor="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"></Button>
+
+        <TextView
+            android:id="@+id/wifi_fragment_pressure_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"></TextView>
+
+        <Button
+            android:id="@+id/wifi_fragment_humidity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Humidity"
+            android:textColor="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"></Button>
+
+        <TextView
+            android:id="@+id/wifi_fragment_humidity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"></TextView>
+
+        <Button
+            android:id="@+id/wifi_fragment_battery_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Battery"
+            android:textColor="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"></Button>
+
+        <TextView
+            android:id="@+id/wifi_fragment_battery_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="3">
+            <Button
+                android:id="@+id/zero_cal_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Nitrogen Calibrate"/>
+            <Button
+                android:id="@+id/amb_cal_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Ambient Calibrate"/>
+            <Button
+                android:id="@+id/target_cal_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Target Calibrate"/>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Timestamp"></Button>
+
+        <TextView
+            android:id="@+id/wifi_fragment_timestamp_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"></TextView>
+    </LinearLayout>
+
+</FrameLayout>
