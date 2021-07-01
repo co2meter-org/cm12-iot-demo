@@ -13,7 +13,7 @@
 
 #define WIFI_MODE 0
 #define UART_MODE 1
-#define COMMAND_MODE WIFI_MODE
+#define COMMAND_MODE UART_MODE
 
 // Wifi credentials
 char WIFI_SSID[]="Your WiFi SSID Here";
@@ -283,6 +283,48 @@ void zero() {
     digitalWrite(18, LOW);
 }
 
+void span_calibrate() {
+  Serial.println("Enter your target calibration: ");
+  while (Serial.available() <= 0);
+  delay(100);
+  long span_target = Serial.parseInt();
+  Serial.println("span target: ");
+  Serial.print(span_target);
+  Serial.println("");
+  Serial.println("Calibrating to target...");
+  digitalWrite(18, HIGH);
+  adp.enableLDO(2,1);
+  int timeout = 0;
+  while (ready_pin.pressed == false) {
+    delay(1);
+    timeout++;
+    if (timeout > 5000) {
+      Serial.println("nready timed out at 5 sec");
+      adp.enableLDO(2, 0);
+    }
+  }
+  Serial2.print('Z',1);
+  delay(100);
+  if (Serial2.available() > 0) {
+    byte co2[Serial2.available()];
+    Serial2.readBytes(co2, Serial2.available());
+  }
+  delay(100);
+  char cal_str[8];
+  sprintf(cal_str, "X %ld\r\n", span_target);
+  Serial.print(cal_str);
+  Serial2.print(cal_str);
+  delay(100);
+  if (Serial2.available() > 0) {
+    int ret_size = Serial2.available();
+    char cal_ret[ret_size];
+    Serial2.readBytes((byte *)cal_ret, ret_size);
+    Serial.print(cal_ret);
+  }
+  adp.enableLDO(2,0);
+  digitalWrite(18, LOW);
+}
+
 
 void printBatteryLevel() {
   Serial.print("Current Battery Voltage: ");
@@ -512,7 +554,7 @@ void enterServerMode() {
 
 void enterCommandMode() {
   commandMode = true;
-  Serial.println("Command Options:\r\n  c -> ambient calibrate\r\n  z -> zero calibrate\r\n  d -> data dump\r\n  s -> sleep\r\n  b -> check battery level\r\n  r -> delete data\r\n");
+  Serial.println("Command Options:\r\n  c -> ambient calibrate\r\n  z -> zero calibrate\r\n  x -> span calibration\r\n  d -> data dump\r\n  s -> sleep\r\n  b -> check battery level\r\n  r -> delete data\r\n");
   Serial.println("Ready for Command: ");
 }
 
@@ -605,6 +647,9 @@ void loop() {
         break;
       case 'z':
         zero();
+        break;
+      case 'x':
+        span_calibrate();
         break;
       case 'd':
         dataDump();
