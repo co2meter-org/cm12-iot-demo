@@ -378,8 +378,8 @@ void ambient_calibrate() {
 
 void zero() {
   Serial.println("Zero Calibrating");
-  disableSleepTimer();
-  enableSleepTimer();
+  //disableSleepTimer();
+  //enableSleepTimer();
   digitalWrite(18, HIGH);
   byte cal_zero[] = { 0x68, 0x10, 0x00, 0x01, 0x00, 0x01, 0x02, 0x7C, 0x07, 0x04, 0xE2 };
   Serial2.write(cal_zero, 11);

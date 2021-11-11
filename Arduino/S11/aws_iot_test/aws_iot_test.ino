@@ -86,6 +86,14 @@ int getco2() {
 
 void setup() {
   // put your setup code here, to run once:
+  adp.enableLDO(3, 1);
+  // With S11 we leave the power always on
+  adp.enableLDO(2, 1);
+  adp.setCharger(1);
+  adp.enableFuelGauge(1);
+  // Reducing the CPU Frequency is better for power consumption, helping to extend battery life
+  setCpuFrequencyMhz(80);
+  
   WiFi.disconnect(true);
   Serial.begin(115200);
   // initialise AWS connection
@@ -114,29 +122,45 @@ void setup() {
   
   EEPROM.begin(12);
   char first_start = EEPROM.read(0);
+  byte rd_sr_mode[] = { 0x68, 0x03, 0x00, 0x0A, 0x00, 0x01, 0xDC, 0xF3 };
+  Serial2.write(rd_sr_mode, 8);
+  delay(10);
+  int timeout = 0;
+  while (Serial2.available() <= 0) {
+    delay(1);
+    timeout++;
+    if (timeout > 1000) {
+      Serial.println("timed out");
+      break;
+    }
+  }
+  byte co2array[Serial2.available()];
+  int i = 0;
+  while (Serial2.peek() != -1) {
+    co2array[i] = Serial2.read();
+    i++;
+  }
+  for(i=0; i<sizeof(co2array); i++){
+    printHex(co2array[i]);
+  }
+  
+  byte sr_mode[] = { 0x68, 0x10, 0x00, 0x0A, 0x00, 0x01, 0x02, 0x00, 0x01, 0xA5, 0x68 };
+  Serial2.write(sr_mode, 11);
+  Serial2.flush();
+  delay(10);
+
+  byte rst_mode[] = { 0x68, 0x10, 0x00, 0x01, 0x00, 0x01, 0x02, 0x00, 0xFF, 0x25, 0x93 };
+  Serial2.write(sr_mode, 11);
+  Serial2.flush();
+  delay(150);
   //first_start = 'N';
   if (first_start != 'S') {
     Serial.print("First time running..");
     //Read Sensor State Data
     save_hr_to_eeprom();
-    //Set the sensor to single measurement mode
-    byte sr_mode[] = { 0x68, 0x10, 0x00, 0x0A, 0x00, 0x01, 0x02, 0x00, 0x01, 0xA5, 0x68 };
-    Serial2.write(sr_mode, 11);
-    delay(10);
-    Serial2.flush();
+    
     EEPROM.write(0,(byte)'S');
     EEPROM.commit();
-  } else {
-    Serial.println("Set the HR Registers");
-    get_hr_from_eeprom();
-    //Tell sensor to start measurement
-    delay(10);
-    Serial2.flush();
-    byte start_msmt[] = { 0x68, 0x10, 0x00, 0x09, 0x00, 0x01, 0x02, 0x00, 0x01, 0xA5, 0x5B };
-    Serial2.write(start_msmt, 11);
-    //Delay 50ms to give the sensor to set nRDY high
-    delay(50);
-    Serial2.flush();
   }
   
   I2CBME.begin(BME_SDA,BME_SCL,100000);
