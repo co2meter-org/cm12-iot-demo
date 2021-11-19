@@ -1,15 +1,16 @@
 # CO2Meter IoT Development Kit
 
 ## Table of Contents
-1. [Getting to Know Your DevKit](#getting-to-know-your-devkit)
-2. [General Setup](#general-setup)
+1. [Downloading the Code and Repo](#downloading-the-code-and-repo)
+2. [Getting to Know Your DevKit](#getting-to-know-your-devkit)
+3. [General Setup](#general-setup)
   - [Arduino](#arduino)
   - [iOS](#ios)
   - [Android](#android)
-3. [Bluetooth](#bluetooth)
-4. [WiFi](#wifi)
-5. [AWS IoT](#aws-iot)
-6. [Troubleshooting](#troubleshooting)
+4. [Bluetooth](#bluetooth)
+5. [WiFi](#wifi)
+6. [AWS IoT](#aws-iot)
+7. [Troubleshooting](#troubleshooting)
 
 ## Downloading the Code and Repo
 To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
