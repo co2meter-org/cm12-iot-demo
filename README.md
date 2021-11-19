@@ -202,6 +202,8 @@ To test on Android devices, download and install [Android Studio](https://develo
 > If the build or gradle sync fails, change to Build Online mode
 
 ## How to Load Your Arduino Program
+To open your Arduino Sketch, make sure the [repository is downloaded](#downloading-the-code-and-repo).  In your Windows Explorer, navigate to the sketch you want to run located where you unzipped the repository, and double click on the .ino file.
+
 To load an Arduino Sketch, you first need to power the ESP32 into Serial Boot Mode.  To do this, change the Boot Switch to 1 and push then release the Reset Momentary Switch.
 
 Next, select the port in Arduino that the ESP32 DevKit is connected.
