@@ -58,6 +58,7 @@ Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors
 To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.  
 
 You then need to install the ESP32 boards in the Board Manager:
+> If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#mac)
 #### Windows:
 Click File->Preferences
 
@@ -80,6 +81,8 @@ Search for the ESP32 and click on the Install button
 ![install](assets/installing.png)
 
 Once you finished the installation, you will see a new set of boards available to select.  You can choose one of the ESP32 boards.  All of our testing has been done on the ESP32 Dev Module.
+
+You can now skip to the [Libraries Section Here](#libraries)
 
 #### Mac:
 Click Arduino->Preferences
