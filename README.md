@@ -63,7 +63,11 @@ Click File->Preferences
 
 ![open preferences](assets/arduino-ide-open-preferences.png)
 
-Then enter the url: https://dl.espressif.com/dl/package_esp32_index.json into Additional Boards Manager URLs Text Box
+Then enter the url:
+```
+https://dl.espressif.com/dl/package_esp32_index.json
+```
+into Additional Boards Manager URLs Text Box
 
 ![preferences](assets/preferences.png)
 
@@ -82,7 +86,11 @@ Click Arduino->Preferences
 
 ![mac open preferences](assets/mac-open-preferences.png)
 
-Then enter the url: https://dl.espressif.com/dl/package_esp32_index.json into the Additional Boards Manager URLs Text Box
+Then enter the url:
+```
+https://dl.espressif.com/dl/package_esp32_index.json
+```
+into the Additional Boards Manager URLs Text Box
 
 ![mac preferences](assets/mac-preferences.png)
 
@@ -112,6 +120,20 @@ mqtt
 Find the MQTT library, and install
 ![mqtt library](assets/install-mqtt.png)
 
+##### Adafruit-BME280
+To be able to read the BME280 sensor on the DevKit (for Temperature, Pressure, and Relative Humdity), the Adafruit BME280 Library must be installed.
+
+While still in the Manage Libraries windows
+![manage libraries](assets/arduino-manage-libraries.png)
+Search for, and install the Adafruit BME280 Library
+![install bme280](assets/install-bme280.png)
+
+##### Adafruit BusIO
+The Adafruit BME280 has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
+
+While sitll in the Manage Libraries window, search for, and install the Adafruit BusIO Library
+![install busio](assets/install-busio.png)
+
 ##### ESPAsyncWebServer:
 Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project zip file.
 ![download async](assets/download-esp-async.png)
@@ -120,6 +142,20 @@ When the download is completed, add the zip library into Arduino IDE by going to
 ![add zip](assets/add-zip-library.png)
 
 Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-master.zip" and Click "Choose"
+
+##### AsyncTCP
+ESPAsyncWebServer has a dependency that also needs to be installed [AsyncTCP](https://github.com/me-no-dev/AsyncTCP).
+
+To install this library into your Arduino IDE, go the [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) and download the project zip file.
+![download async](assets/download-asynctcp.png)
+
+When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
+![add zip](assets/add-zip-library.png)
+
+Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Choose"
+
+##### Arduino General Setup Done
+Congrats! Setup for the Arduino environment is now down, and it's time to start making!  [Go back to the top](#table-of-contents) to find the next section you want to follow.
 
 #### iOS
 > To Test on iOS, it is required to have a hardware device such as an iPhone or iPad.  Not all features will function using the XCode Simulator.  XCode is only available for MacOS.  To ensure best results, update to the latest version of MacOS and XCode.

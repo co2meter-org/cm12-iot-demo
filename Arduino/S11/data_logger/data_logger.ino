@@ -640,6 +640,11 @@ void enterServerMode() {
     disableSleepTimer();
     enableSleepTimer();
     digitalWrite(18, HIGH);
+    byte start_msmt[] = { 0x68, 0x10, 0x00, 0x09, 0x00, 0x01, 0x02, 0x00, 0x01, 0xA5, 0x5B };
+    Serial2.write(start_msmt, 11);
+    //Delay 50ms to give the sensor to set nRDY high
+    delay(50);
+    Serial2.flush();
     int co2 = getco2();
     float temperature = bme.readTemperature();
     float humidity = bme.readHumidity();

@@ -8,7 +8,7 @@
 
 // Wifi credentials
 char WIFI_SSID[]="Your WiFi SSID Here";
-char WIFI_PASSWORD[]="Your WiFi Password Here";
+char WIFI_PASSWORD[]="You WiFi Password Here";
 
 // Definitions for BME280
 #define BME_SCL 4

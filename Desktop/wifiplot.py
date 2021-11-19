@@ -79,7 +79,7 @@ def datalog(outputfilename,period):
     pressure = []
     while True:
       resp = requests.get('http://esp32.local/values/all')
-      print(resp)
+      print(resp.text)
       values = json.loads(resp.text)
       writer.writerow({'time':values['timestamp'],'co2':values['co2'],'temperature':values['temperature'],'humidity':values['humidity'],'pressure':values['pressure']})
 
