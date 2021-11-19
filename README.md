@@ -11,6 +11,13 @@
 5. [AWS IoT](#aws-iot)
 6. [Troubleshooting](#troubleshooting)
 
+## Downloading the Code and Repo
+To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
+
+![download repo](assets/download-repo.png)
+
+Unzip the file, and you now have all of the Code, including Arduino Sketches, XCode Projects, Android Studio Projects, and Python Scripts.
+
 ## Getting to Know Your DevKit
 ![DevKit](assets/devkit_image.jpeg)
 > The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
@@ -277,10 +284,9 @@ To demo the AWS IoT application, it's required to do some more setup.  Fist step
 1. [Create AWS Account](#create-aws-account)
 2. [Setup AWS IoT](#setup-aws-iot)
 3. [Download Arduino Library](#download-arduino-library)
-4. [Update Library Certificates](#update-library-certificates)
-5. [Update Sketch](#update-sketch)
-6. [Test](#test)
-7. [Troubleshooting](#troubleshooting)
+4. [Update Sketch](#update-sketch)
+5. [Test](#test)
+6. [Troubleshooting](#troubleshooting)
 
 ### Create AWS Account
 If you don't already have an AWS Account, it's free to [create and own](https://aws.amazon.com/resources/create-account/).  You only pay for the services you use.  Amazon gives you a free tier for your first year.  The AWS IoT application provided has no cost associated with the free tier account.  If you have an account already, [sign in](https://aws.amazon.com/console/).
