@@ -162,7 +162,7 @@ To install this library into your Arduino IDE, go the [AsyncTCP](https://github.
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
 ![add zip](assets/add-zip-library.png)
 
-Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Choose"
+Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
 
 ##### Arduino General Setup Done
 Congrats! Setup for the Arduino environment is now down, and it's time to start making!  [Go back to the top](#table-of-contents) to find the next section you want to follow.
