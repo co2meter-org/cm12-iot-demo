@@ -80,7 +80,8 @@ Search for the ESP32 and click on the Install button
 
 ![install](assets/installing.png)
 
-Once you finished the installation, you will see a new set of boards available to select.  You can choose one of the ESP32 boards.  All of our testing has been done on the ESP32 Dev Module.
+Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
+![select esp32 dev module](assets/win-select-esp32-dev-module.png)
 
 You can now skip to the [Libraries Section Here](#libraries)
 
@@ -105,7 +106,7 @@ Search for ESP32 and click on the Install button
 
 ![boards manager](assets/mac-boards-manager.png)
 
-Once you finished the installation, you will see a new set of boards available to select.  You can choose one of the ESP32 boards.  All of our testing has been done on the ESP32 Dev Module.
+Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
 
 ![selected board](assets/mac-board-selected.png)
 
@@ -131,14 +132,20 @@ While still in the Manage Libraries windows
 Search for, and install the Adafruit BME280 Library
 ![install bme280](assets/install-bme280.png)
 
+##### Adafruit Unified Sensor
+The Adafruit BME280 has a dependency with the Adafruit Unified Sensor library, so that library also needs to be installed.
+
+While sitll in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
+![install busio](assets/install-unified-sensor.png)
+
 ##### Adafruit BusIO
-The Adafruit BME280 has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
+The Adafruit Unified Sensor has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
 
 While sitll in the Manage Libraries window, search for, and install the Adafruit BusIO Library
 ![install busio](assets/install-busio.png)
 
 ##### ESPAsyncWebServer:
-Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project zip file.
+Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the "Code" button, then click the "Download Zip" button and save it as a zip file.
 ![download async](assets/download-esp-async.png)
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
