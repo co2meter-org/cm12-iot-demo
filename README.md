@@ -145,7 +145,7 @@ While sitll in the Manage Libraries window, search for, and install the Adafruit
 ![install busio](assets/install-busio.png)
 
 ##### ESPAsyncWebServer:
-Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the "Code" button, then click the "Download Zip" button and save it as a zip file.
+Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the Green "Code" button, then click the "Download Zip" button and save it as a zip file.
 ![download async](assets/download-esp-async.png)
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
