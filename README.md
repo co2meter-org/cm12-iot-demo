@@ -1,16 +1,16 @@
 # CO2Meter IoT Development Kit
 
 ## Table of Contents
-1. [Downloading the Code and Repo](#downloading-the-code-and-repo)
-2. [Getting to Know Your DevKit](#getting-to-know-your-devkit)
+1. [Getting To Know Your DevKit](#downloading-the-code-and-repo)
+2. [Downloading The Code and Repo](#getting-to-know-your-devkit)
 3. [General Setup](#general-setup)
-  - [Arduino](#arduino)
+4. [Mobile Setup]
   - [iOS](#ios)
   - [Android](#android)
-4. [Bluetooth](#bluetooth)
-5. [WiFi](#wifi)
-6. [AWS IoT](#aws-iot)
-7. [Troubleshooting](#troubleshooting)
+5. [Bluetooth](#bluetooth)
+6. [WiFi](#wifi)
+7. [AWS IoT](#aws-iot)
+8. [Troubleshooting](#troubleshooting)
 
 ## Downloading the Code and Repo
 To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
@@ -24,6 +24,8 @@ Unzip the file, and you now have all of the Code, including Arduino Sketches, XC
 > The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
 
 #### ESP32-WROOM
+#### ESP32-WROOM Datasheet (links/https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf)
+
 The CO2Meter IoT DevKit comes with a standard ESP32-WROOM with dual-core processor, on-board WiFi and Bluetooth with a built-in antenna.  ESP32 can programmed using [ESP-IDF](https://github.com/espressif/esp-idf), or using the [Arduino Library](https://github.com/espressif/arduino-esp32).
 
 #### Boot Mode Switch
