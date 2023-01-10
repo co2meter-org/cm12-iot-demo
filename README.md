@@ -1,10 +1,10 @@
 # CO2Meter IoT Development Kit
 
 ## Table of Contents
-1. [Getting To Know Your DevKit](#downloading-the-code-and-repo)
-2. [Downloading The Code and Repo](#getting-to-know-your-devkit)
+1. [Getting To Know Your DevKit](#Getting To Know Your DevKit)
+2. [Downloading The Code and Repo](#Downloading The Code and Repo)
 3. [General Setup](#general-setup)
-4. [Mobile Setup]
+4. [Mobile Setup](#mobile setup instructions)
   - [iOS](#ios)
   - [Android](#android)
 5. [Bluetooth](#bluetooth)
@@ -17,16 +17,15 @@ To use the code included in this repository, download this repo by clicking on t
 
 ![download repo](assets/download-repo.png)
 
-Unzip the file, and you now have all of the Code, including Arduino Sketches, XCode Projects, Android Studio Projects, and Python Scripts.
+Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
 
 ## Getting to Know Your DevKit
 ![DevKit](assets/devkit_image.jpeg)
 > The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
 
 #### ESP32-WROOM
-#### ESP32-WROOM Datasheet (links/https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf)
-
 The CO2Meter IoT DevKit comes with a standard ESP32-WROOM with dual-core processor, on-board WiFi and Bluetooth with a built-in antenna.  ESP32 can programmed using [ESP-IDF](https://github.com/espressif/esp-idf), or using the [Arduino Library](https://github.com/espressif/arduino-esp32).
+[ESP32-WROOM Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf)
 
 #### Boot Mode Switch
 The boot mode switch allows you to put the ESP32 into normal mode to run your latest program, or boot mode to load your program onto the onboard flash.  The boot mode switch also gives you the flexibility to choose how to connect to your sensor, by either connecting directly to the ESP32 Hardware UART or connecting an external microcontroller to the Sensor External Header.
@@ -46,7 +45,7 @@ The boot mode switch allows you to put the ESP32 into normal mode to run your la
 5. MCU Comm / ESP Alt will allow the RX / TX Communications to come from the External MCU Connector and the ESP can control the EN / nRDY / COMSEL
 
 #### GPIO Header
-You have several unused GPIOs available that are labeled, making it easier to know which GPIO you're connected and which to reference in your application.  Also available is the hardware I2C pins.  There are unpopulated resistor pads to add I2C Pullup Resistors if your external I2C device does not contain them.
+You have several unused GPIOs available that are labeled, making it easier to know which GPIO you're connected to and which to reference in your application.  Also available are the hardware I2C pins.  There are unpopulated resistor pads to add I2C Pullup Resistors if your external I2C device does not contain them.
 
 #### USB to UART Connector
 Made available is the Hardware UART0 pins on the USB connector, allowing you to view your print statements, or giving you the ability to communicate in a terminal program with your sensor over UART.  The USB connector can also provide the power to recharge the external 3.7V LiPol battery.  There is an amber LED to let you know when the battery is fully charged.
@@ -68,17 +67,16 @@ Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors
 To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.  
 
 You then need to install the ESP32 boards in the Board Manager:
-> If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#mac)
+> If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#macOS)
 #### Windows:
 Click File->Preferences
 
 ![open preferences](assets/arduino-ide-open-preferences.png)
 
-Then enter the url:
+Then enter the url below into section labeled "Additional Boards Manager URLs:"
 ```
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
-into Additional Boards Manager URLs Text Box
 
 ![preferences](assets/preferences.png)
 
@@ -95,7 +93,7 @@ Once you finished the installation, you will see a new set of boards available t
 
 You can now skip to the [Libraries Section Here](#libraries)
 
-#### Mac:
+#### MacOS General Setup:
 Click Arduino->Preferences
 
 ![mac open preferences](assets/mac-open-preferences.png)
@@ -135,9 +133,9 @@ Find the MQTT library, and install
 ![mqtt library](assets/install-mqtt.png)
 
 ##### Adafruit-BME280
-To be able to read the BME280 sensor on the DevKit (for Temperature, Pressure, and Relative Humdity), the Adafruit BME280 Library must be installed.
+Allows sensor to read Temperature, Pressure, and Relative Humidity.
 
-While still in the Manage Libraries windows
+In Arduino, go to Sketch->Include Library->Manager Library->Filter Your Search->Type in Adafruit-BME280->Install
 ![manage libraries](assets/arduino-manage-libraries.png)
 Search for, and install the Adafruit BME280 Library
 ![install bme280](assets/install-bme280.png)
@@ -145,7 +143,7 @@ Search for, and install the Adafruit BME280 Library
 ##### Adafruit Unified Sensor
 The Adafruit BME280 has a dependency with the Adafruit Unified Sensor library, so that library also needs to be installed.
 
-While sitll in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
+While still in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
 ![install busio](assets/install-unified-sensor.png)
 
 ##### Adafruit BusIO
@@ -173,6 +171,23 @@ When the download is completed, add the zip library into Arduino IDE by going to
 ![add zip](assets/add-zip-library.png)
 
 Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
+
+## How to Load Your Arduino Program
+To open your Arduino Sketch, make sure the [repository is downloaded](#downloading-the-code-and-repo).  In your Windows Explorer, navigate to the sketch you want to run located where you unzipped the repository, and double click on the .ino file.
+
+To load an Arduino Sketch, you first need to power the ESP32 into Serial Boot Mode.  To do this, change the Boot Switch to 1 and push then release the Reset Momentary Switch.
+
+Next, select the port in Arduino that the ESP32 DevKit is connected.
+
+![window com port](assets/com-port-selected.jpg)
+
+![mac com port](assets/mac-port-select.png)
+
+Click on the build and load button
+
+![arduino build](assets/arduino-load.png)
+
+Finally, to run the Arduino sketch, move the Boot Mode switch back to 0 and press the Reset Button.
 
 ##### Arduino General Setup Done
 Congrats! Setup for the Arduino environment is now down, and it's time to start making!  [Go back to the top](#table-of-contents) to find the next section you want to follow.
@@ -203,23 +218,6 @@ With the workspace open, connect your device, and click on Build and Run to inst
 #### Android
 To test on Android devices, download and install [Android Studio](https://developer.android.com/studio).  When installation is complete, open the project from Finder, Windows Explorer, or open the project within Android Studio.  Connect your device, and Build and Run.
 > If the build or gradle sync fails, change to Build Online mode
-
-## How to Load Your Arduino Program
-To open your Arduino Sketch, make sure the [repository is downloaded](#downloading-the-code-and-repo).  In your Windows Explorer, navigate to the sketch you want to run located where you unzipped the repository, and double click on the .ino file.
-
-To load an Arduino Sketch, you first need to power the ESP32 into Serial Boot Mode.  To do this, change the Boot Switch to 1 and push then release the Reset Momentary Switch.
-
-Next, select the port in Arduino that the ESP32 DevKit is connected.
-
-![window com port](assets/com-port-selected.jpg)
-
-![mac com port](assets/mac-port-select.png)
-
-Click on the build and load button
-
-![arduino build](assets/arduino-load.png)
-
-Finally, to run the Arduino sketch, move the Boot Mode switch back to 0 and press the Reset Button.
 
 ## Bluetooth
 Running the Bluetooth application requires additional setup.  Just run the provided Mobile Application, and follow the [Arduino steps](#how-to-load-your-arduino-program) to load the co2meter_demo_ble Arduino Sketch.
