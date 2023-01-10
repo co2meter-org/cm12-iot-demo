@@ -47,7 +47,7 @@ The boot mode switch allows you to put the ESP32 into normal mode to run your la
 You have several unused GPIOs available that are labeled, making it easier to know which GPIO you're connected and which to reference in your application.  Also available is the hardware I2C pins.  There are unpopulated resistor pads to add I2C Pullup Resistors if your external I2C device does not contain them.
 
 #### USB to UART Connector
-Made available is the Hardware UART0 pins on the USB connector, allowing you to view your print statements, or giveing you the ability to communicate in a terminal program with your sensor over UART.  The USB connector can also provide the power to recharge the external 3.7V LiPol battery.  There is an amber LED to let you know when the battery is fully charged.
+Made available is the Hardware UART0 pins on the USB connector, allowing you to view your print statements, or giving you the ability to communicate in a terminal program with your sensor over UART.  The USB connector can also provide the power to recharge the external 3.7V LiPol battery.  There is an amber LED to let you know when the battery is fully charged.
 
 #### Battery Connector
 A standard JST connector for external LiPol battery.  In order to work correctly with the battery recharge circuit, this must be a 3.7V Lithium Polymer Battery.  We have provided a 400mAh battery with your kit, but there are several others available on Amazon, Digikey, Mouser, etc. with capacities of up to 10,000mAh, giving you more battery to power your development kit for even longer.
