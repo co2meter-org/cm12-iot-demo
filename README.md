@@ -1,16 +1,17 @@
 # CO2Meter IoT Development Kit
 
 ## Table of Contents
-1. [Getting To Know Your DevKit] <!--(#Getting To Know Your DevKit)-->
-2. [Downloading The Code and Repo]<!--(#Downloading The Code and Repo)-->
-3. [General Setup]<!--(#general-setup)-->
-4. [Mobile Setup]<!--(#mobile setup instructions)-->
-  - [iOS]<!--(#ios)-->
-  - [Android]<!--(#android)-->
-5. [Bluetooth]<!--(#bluetooth)-->
-6. [WiFi]<!--(#wifi)-->
-7. [AWS IoT]<!--(#aws-iot)-->
-8. [Troubleshooting]<!--(#troubleshooting)-->
+1. Getting To Know Your DevKit <!--(#Getting To Know Your DevKit)-->
+2. Downloading The Code and Repo<!--(#Downloading The Code and Repo)-->
+3. Windows General Setup<!--(#general-setup)-->
+4. MacOS General Setup<!--(#mobile setup instructions)-->
+5. How To Load Your Arduino Program
+5. iOS Setup<!--(#bluetooth)-->
+6. Android Setup<!--(#wifi)-->
+7. Bluetooth<!--(#aws-iot)-->
+8. WiFi
+9. Wifi Plotter
+10. AWS IoT <!--(#troubleshooting)-->
 
 <details open>
 <summary>
@@ -77,7 +78,7 @@ Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(M
 
 <details open>
 <summary>
-General Setup
+Windows General Setup
 </summary>
 </br>
 
