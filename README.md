@@ -77,7 +77,7 @@ To use the code included in this repository, download this repo by clicking on t
 Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
 </details>
 
-<details open>
+<details>
 <summary>
 Windows General Setup
 </summary>
@@ -117,7 +117,7 @@ Once you finished the installation, you will see a new set of boards available t
 You can now skip to the [Libraries Section Here](#libraries)
 </details>
 
-<details open>
+<details>
 <summary>
 MacOS General Setup:
 </summary>
@@ -202,7 +202,7 @@ When the download is completed, add the zip library into Arduino IDE by going to
 Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
 </details>
 
-<details open>
+<details>
 <summary>
 How to Load Your Arduino Program
 </summary>
@@ -228,7 +228,7 @@ Finally, to run the Arduino sketch, move the Boot Mode switch back to 0 and pres
 Congrats! Setup for the Arduino environment is now down, and it's time to start making!  [Go back to the top](#table-of-contents) to find the next section you want to follow.
 </details>
 
-<details open>
+<details>
 <summary>
 iOS
 </summary>
@@ -294,7 +294,7 @@ You're now all set to use iOS with AWS IoT Core
 With the workspace open, connect your device, and click on Build and Run to install and debug the application on your device.
 </details>
 
-<details open>
+<details>
 <summary>
 Android
 </summary>
@@ -304,7 +304,7 @@ To test on Android devices, download and install [Android Studio](https://develo
 > If the build or gradle sync fails, change to Build Online mode
 </details>
 
-<details open>
+<details>
 <summary>
 Bluetooth
 </summary>
@@ -313,7 +313,7 @@ Bluetooth
 Running the Bluetooth application requires additional setup.  Just run the provided Mobile Application, and follow the [Arduino steps](#how-to-load-your-arduino-program) to load the co2meter_demo_ble Arduino Sketch.
 </details>
 
-<details open>
+<details>
 <summary>
 WiFi
 </summary>
@@ -326,7 +326,7 @@ To run the WiFi application, you need to update your WiFi SSID and Password in t
 Once that is done, load the WiFi sketch using the [Arduino steps to load your Arduino Program](#how-to-load-your-arduino-program)
 </details>
 
-<details open>
+<details>
 <summary>
 WiFi Plotter
 </summary>
@@ -384,7 +384,7 @@ python wifiplot.py -d logfile.csv -t 5
 ```
 </details>
 
-<details open>
+<details>
 <summary>
 AWS IoT
 </summary>
