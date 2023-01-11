@@ -61,10 +61,16 @@ You have available a standard push button that is connected to the ESP32 GPIO Pi
 Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors.
 </details>
 
+<details open>
+<summary>
 ## Downloading the Code and Repo
+</summary>
+<br>
+
 To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
 
-![download repo](assets/download-repo.png)
+<img title="Download Repo" alt="Alt text" src="/assets/download-repo.png"> <!--![download repo](assets/download-repo.png)-->
+</details>
 
 Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
 
