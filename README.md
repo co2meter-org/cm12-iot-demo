@@ -63,7 +63,7 @@ You have available a standard push button that is connected to the ESP32 GPIO Pi
 Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors.
 </details>
 
-<details open>
+<details>
 <summary>
 Downloading the Code and Repo
 </summary>
