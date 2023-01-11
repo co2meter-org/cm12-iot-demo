@@ -253,6 +253,43 @@ Once you are in the correct directory, type the command:
 
 When the command completes and the frameworks are installed, open the **IoT DevKit.xcworkspace**.  It's very important to open workspace and not the project, as this could corrupt the frameworks.
 
+#### iOS Cognito
+If you plan on using the included iOS Demo application, it is required to create an AWS Cognito Identity Pool.
+> These steps only need to be followed if you plan to use the iOS Demo Application.  If you are only using Android, or Web Based, ignore this section
+
+From the AWS Console, search for services and type "cognito" in the searchbar.
+<img title="Cognito Search" alt="Alt text" src="/assets/cognito-search.png"> <!--![cognito search](assets/cognito-search.png)-->
+
+In the Cognito Main Dashboard, select "Manage Identity Pools"
+<img title="Click Identity Pools" alt="Alt text" src="/assets/click-ident-pools.png"> <!--![click identity pools](assets/click-ident-pools.png)-->
+
+In the new Identity Pool Wizard, create a unique name for the Identity Pool, and select the Enable access to unauthenticated identities checkbox.
+<img title="Identity Pool Setup Wizard" alt="Alt text" src="/assets/ident-pool-wizard-page.png"> <!--![identity pool setup wizard](assets/ident-pool-wizard-page.png)-->
+
+Leave the prefilled options to Create a new IAM Role, and click on the "Allow" button.  Make a note of the Role name for the unauthenticated role, though they both should be very similar and based on the name of the Cognito Identity pool from the previous page.
+<img title="Creat IAM" alt="Alt text" src="/assets/create-iam.png"> <!--![create iam](assets/create-iam.png)-->
+
+After clicking allow, make a note of the identity pool id and region.
+<img title="Pool ID" alt="Alt text" src="/assets/ident-pool-id.png"> <!--![pool id](assets/ident-pool-id.png)-->
+
+Next, head over to the AWS IAM Service.
+<img title="IAM Search" alt="Alt text" src="/assets/iam-search.png"> <!--![iam search](assets/iam-search.png)-->
+
+From the IAM Dashboard, click on Roles
+<img title="IAM Dash" alt="Alt text" src="/assets/iam-dash.png"> <!--![iam dash](assets/iam-dash.png)-->
+
+Find the role that you just created and click to view the options.  In the Role Summary, click on Attach Policies
+<img title="Attach Policy" alt="Alt text" src="/assets/attach-role-policy.png"> <!--![attach policy](assets/attach-role-policy.png)-->
+
+In the search bar to filter policies, type:
+```
+AWSIoTFullAccess
+```
+and select the policy that shows up, and click "Attach Policy"
+<img title="Full Access" alt="Alt text" src="/assets/full-access.png"> <!--![full access](assets/full-access.png)-->
+
+You're now all set to use iOS with AWS IoT Core
+
 With the workspace open, connect your device, and click on Build and Run to install and debug the application on your device.
 </details>
 
@@ -372,43 +409,6 @@ After logging in to your AWS Console, search for the IoT Core service and click.
 <img title="IoT Core" alt="Alt text" src="/assets/iot-core.png"> <!--![iot core](assets/iot-core.png)-->
 
 <img title="IoT Core Home" alt="Alt text" src="/assets/iot-core-home.png"> <!--![iot core home](assets/iot-core-home.png)-->
-
-#### iOS Cognito
-If you plan on using the included iOS Demo application, it is required to create an AWS Cognito Identity Pool.
-> These steps only need to be followed if you plan to use the iOS Demo Application.  If you are only using Android, or Web Based, ignore this section
-
-From the AWS Console, search for services and type "cognito" in the searchbar.
-<img title="Cognito Search" alt="Alt text" src="/assets/cognito-search.png"> <!--![cognito search](assets/cognito-search.png)-->
-
-In the Cognito Main Dashboard, select "Manage Identity Pools"
-<img title="Click Identity Pools" alt="Alt text" src="/assets/click-ident-pools.png"> <!--![click identity pools](assets/click-ident-pools.png)-->
-
-In the new Identity Pool Wizard, create a unique name for the Identity Pool, and select the Enable access to unauthenticated identities checkbox.
-<img title="Identity Pool Setup Wizard" alt="Alt text" src="/assets/ident-pool-wizard-page.png"> <!--![identity pool setup wizard](assets/ident-pool-wizard-page.png)-->
-
-Leave the prefilled options to Create a new IAM Role, and click on the "Allow" button.  Make a note of the Role name for the unauthenticated role, though they both should be very similar and based on the name of the Cognito Identity pool from the previous page.
-<img title="Creat IAM" alt="Alt text" src="/assets/create-iam.png"> <!--![create iam](assets/create-iam.png)-->
-
-After clicking allow, make a note of the identity pool id and region.
-<img title="Pool ID" alt="Alt text" src="/assets/ident-pool-id.png"> <!--![pool id](assets/ident-pool-id.png)-->
-
-Next, head over to the AWS IAM Service.
-<img title="IAM Search" alt="Alt text" src="/assets/iam-search.png"> <!--![iam search](assets/iam-search.png)-->
-
-From the IAM Dashboard, click on Roles
-<img title="IAM Dash" alt="Alt text" src="/assets/iam-dash.png"> <!--![iam dash](assets/iam-dash.png)-->
-
-Find the role that you just created and click to view the options.  In the Role Summary, click on Attach Policies
-<img title="Attach Policy" alt="Alt text" src="/assets/attach-role-policy.png"> <!--![attach policy](assets/attach-role-policy.png)-->
-
-In the search bar to filter policies, type:
-```
-AWSIoTFullAccess
-```
-and select the policy that shows up, and click "Attach Policy"
-<img title="Full Access" alt="Alt text" src="/assets/full-access.png"> <!--![full access](assets/full-access.png)-->
-
-You're now all set to use iOS with AWS IoT Core
 
 #### Create Policy
 First thing we need to do in the AWS IoT Core is create a security policy.  This will be attached to your IoT Thing certificates and allows your device to communicate on the MQTT Channels and update your Thing Shadow.
