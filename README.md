@@ -14,7 +14,7 @@
 
 <details open>
 <summary>
-## Getting to Know Your DevKit 
+Getting to Know Your DevKit 
 </summary>
 <br>
 <img title= "DevKit" alt="Alt Text" src="/assets/devkit_image.jpeg"> <!--![DevKit](assets/devkit_image.jpeg)-->
@@ -63,7 +63,7 @@ Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors
 
 <details open>
 <summary>
-## Downloading the Code and Repo
+Downloading the Code and Repo
 </summary>
 <br>
 
