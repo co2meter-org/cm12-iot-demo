@@ -4,7 +4,7 @@
 1. [Getting To Know Your DevKit] <!--(#Getting To Know Your DevKit)-->
 2. [Downloading The Code and Repo]<!--(#Downloading The Code and Repo)-->
 3. [General Setup]<!--(#general-setup)-->
-4. [Mobile Setup]<!--(#mobile setup instructions)>
+4. [Mobile Setup]<!--(#mobile setup instructions)-->
   - [iOS]<!--(#ios)-->
   - [Android]<!--(#android)-->
 5. [Bluetooth]<!--(#bluetooth)-->
@@ -12,9 +12,12 @@
 7. [AWS IoT]<!--(#aws-iot)-->
 8. [Troubleshooting]<!--(#troubleshooting)-->
 
-## Getting to Know Your DevKit
+## <details open>
+<summary>Getting to Know Your DevKit</summary>
+<br>
 ![DevKit](assets/devkit_image.jpeg)
 > The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
+</details>
 
 #### ESP32-WROOM
 The CO2Meter IoT DevKit comes with a standard ESP32-WROOM with dual-core processor, on-board WiFi and Bluetooth with a built-in antenna.  ESP32 can programmed using [ESP-IDF](https://github.com/espressif/esp-idf), or using the [Arduino Library](https://github.com/espressif/arduino-esp32).
@@ -63,7 +66,7 @@ To use the code included in this repository, download this repo by clicking on t
 Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
 
 ## General Setup
-###Windows Setup
+### Windows Setup
 
 #### Download Arduino IDE
 To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.  
