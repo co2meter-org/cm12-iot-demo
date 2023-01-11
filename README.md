@@ -13,6 +13,7 @@
 9. Wifi Plotter
 10. AWS IoT <!--(#troubleshooting)-->
 
+<p>
 <details open>
 <summary>
 Getting to Know Your DevKit 
@@ -603,3 +604,4 @@ Now publish to the Update Shadow topic: `$aws/things/co2-sensor/shadow/update` a
 
 If issues still arise, delete the Thing and start over in the [AWS IoT](#aws-iot) section.
 </details>
+</p>
