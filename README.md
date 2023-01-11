@@ -14,7 +14,7 @@
 10. AWS IoT <!--(#troubleshooting)-->
 
 <p>
-<details open>
+<details>
 <summary>
 Getting to Know Your DevKit 
 </summary>
