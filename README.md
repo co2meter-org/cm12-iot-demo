@@ -70,11 +70,18 @@ Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors
 To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
 
 <img title="Download Repo" alt="Alt text" src="/assets/download-repo.png"> <!--![download repo](assets/download-repo.png)-->
-</details>
+
 
 Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
+</details>
 
-## General Setup
+<details open>
+<summary>
+General Setup
+</summary>
+</br>
+
+
 ### Windows Setup
 
 #### Download Arduino IDE
@@ -85,32 +92,38 @@ You then need to install the ESP32 boards in the Board Manager:
 
 Click File->Preferences
 
-![open preferences](assets/arduino-ide-open-preferences.png)
+<img title="Open Preferences" alt="Alt text" src="/assets/arduino-ide-open-preferences.png"> <!--![open preferences](assets/arduino-ide-open-preferences.png)-->
 
 Then enter the url below into section labeled "Additional Boards Manager URLs:"
 ```
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
 
-![preferences](assets/preferences.png)
+<img title="Preferences" alt="Alt text" src="/assets/preferences.png"> <!--![preferences](assets/preferences.png)-->
 
 After Clicking the OK button, go to the Boards Manager
 
-![boards manager](assets/boardsManager.png)
+<img title="Boards Manager" alt="Alt text" src="/assets/boardsManager.png"> <!--![boards manager](assets/boardsManager.png)-->
 
 Search for the ESP32 and click on the Install button
 
-![install](assets/installing.png)
+<img title="Install" alt="Alt text' src="/assets/installing.png"> <!--![install](assets/installing.png)-->
 
 Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
-![select esp32 dev module](assets/win-select-esp32-dev-module.png)
+<img title="Select ESP32 Dev Module" alt="Alt text" src="/assets/win-select-esp32-dev-module.png"> <!--![select esp32 dev module](assets/win-select-esp32-dev-module.png)-->
 
 You can now skip to the [Libraries Section Here](#libraries)
+</details>
 
-### MacOS General Setup:
+<details open>
+<summary>
+MacOS General Setup:
+</summary>
+</br>
+
 Click Arduino->Preferences
 
-![mac open preferences](assets/mac-open-preferences.png)
+<img title="Mac Open Preferences" alt="Alt text" src="/assets/mac-open-preferences.png"> <!--![mac open preferences](assets/mac-open-preferences.png)-->
 
 Then enter the url:
 ```
@@ -118,60 +131,60 @@ https://dl.espressif.com/dl/package_esp32_index.json
 ```
 into the Additional Boards Manager URLs Text Box
 
-![mac preferences](assets/mac-preferences.png)
+<img title="Mac Preferences" alt="Alt text" src="/assets/mac-preferences.png"> <!--![mac preferences](assets/mac-preferences.png)-->
 
 After Clicking the OK button, go to the Boards Manager and search for esp32 and install
 
-![boards manager menu](assets/mac-boards-manager-menu.png)
+img title="Boards Manager Menu" alt="Alt text" src="/assets/mac-boards-manager-menu.png"> <!--![boards manager menu](assets/mac-boards-manager-menu.png)-->
 
 Search for ESP32 and click on the Install button
 
-![boards manager](assets/mac-boards-manager.png)
+<img title="Boards Manager" alt="Alt text" src="/assets/mac-boards-manager.png"> <!--![boards manager](assets/mac-boards-manager.png)-->
 
 Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
 
-![selected board](assets/mac-board-selected.png)
+<img title="Selected Board" alt= "Alt text" src="/assets/mac-board-selected.png"> <!--![selected board](assets/mac-board-selected.png)-->
 
 #### Libraries:
 There are multiple libraries that are required to compile and run the Arduino applications.  Some of which are downloaded, and others can be installed from the Libraries Manager.
 
 ##### MQTT:
 The Arduino project requires an MQTT library that can be installed directly through Arduino IDE.  Go to the Manage Libraries in Sketch->Include Library->Manage Libraries
-![manage libraries](assets/arduino-manage-libraries.png)
+<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> <!--![manage libraries](assets/arduino-manage-libraries.png)-->
 
 In the search bar, type
 ```
 mqtt
 ```
 Find the MQTT library, and install
-![mqtt library](assets/install-mqtt.png)
+<img title="MQTT Library" alt="Alt text" src="/assets/install-mqtt.png"> <!--![mqtt library](assets/install-mqtt.png)-->
 
 ##### Adafruit-BME280
 Allows sensor to read Temperature, Pressure, and Relative Humidity.
 
 In Arduino, go to Sketch->Include Library->Manager Library->Filter Your Search->Type in Adafruit-BME280->Install
-![manage libraries](assets/arduino-manage-libraries.png)
+<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> <!--![manage libraries](assets/arduino-manage-libraries.png)-->
 Search for, and install the Adafruit BME280 Library
-![install bme280](assets/install-bme280.png)
+<img title="Install BME280" alt="Alt text" src="/assets/install-bme280.png"> <!--![install bme280](assets/install-bme280.png)-->
 
 ##### Adafruit Unified Sensor
 The Adafruit BME280 has a dependency with the Adafruit Unified Sensor library, so that library also needs to be installed.
 
 While still in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
-![install busio](assets/install-unified-sensor.png)
+<img title="Install BusIO" alt="Alt text" src="/assets/install-unified-sensor.png"> <!--![install busio](assets/install-unified-sensor.png)-->
 
 ##### Adafruit BusIO
 The Adafruit Unified Sensor has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
 
 While sitll in the Manage Libraries window, search for, and install the Adafruit BusIO Library
-![install busio](assets/install-busio.png)
+<img title="Install BusIO" alt="Alt text" src="/assets/install-busio.png"> <!--![install busio](assets/install-busio.png)-->
 
 ##### ESPAsyncWebServer:
 Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the Green "Code" button, then click the "Download Zip" button and save it as a zip file.
-![download async](assets/download-esp-async.png)
+<img title="Download Async" alt="Alt text" src="/assets/download-esp-async.png"> <!--![download async](assets/download-esp-async.png)-->
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
-![add zip](assets/add-zip-library.png)
+<img title="Add Zip" alt="Alt text" src="assets/add-zip-library.png"> <!--![add zip](assets/add-zip-library.png)-->
 
 Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-master.zip" and Click "Choose"
 
@@ -179,12 +192,13 @@ Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-
 ESPAsyncWebServer has a dependency that also needs to be installed [AsyncTCP](https://github.com/me-no-dev/AsyncTCP).
 
 To install this library into your Arduino IDE, go the [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) and download the project zip file.
-![download async](assets/download-asynctcp.png)
+<img title="Download Async" alt="Alt text" src="/assets/download-asynctcp.png"> <!--![download async](assets/download-asynctcp.png)-->
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
-![add zip](assets/add-zip-library.png)
+<img title="Add Zip" alt="Alt text" src="/assets/add-zip-library.png"> <!--![add zip](assets/add-zip-library.png)-->
 
 Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
+</details>
 
 ## How to Load Your Arduino Program
 To open your Arduino Sketch, make sure the [repository is downloaded](#downloading-the-code-and-repo).  In your Windows Explorer, navigate to the sketch you want to run located where you unzipped the repository, and double click on the .ino file.
