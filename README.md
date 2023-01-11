@@ -200,7 +200,12 @@ When the download is completed, add the zip library into Arduino IDE by going to
 Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
 </details>
 
-## How to Load Your Arduino Program
+<details open>
+<summary>
+How to Load Your Arduino Program
+</summary>
+</br>
+
 To open your Arduino Sketch, make sure the [repository is downloaded](#downloading-the-code-and-repo).  In your Windows Explorer, navigate to the sketch you want to run located where you unzipped the repository, and double click on the .ino file.
 
 To load an Arduino Sketch, you first need to power the ESP32 into Serial Boot Mode.  To do this, change the Boot Switch to 1 and push then release the Reset Momentary Switch.
@@ -217,10 +222,16 @@ Click on the build and load button
 
 Finally, to run the Arduino sketch, move the Boot Mode switch back to 0 and press the Reset Button.
 
-##### Arduino General Setup Done
+<!--##### Arduino General Setup Done-->
 Congrats! Setup for the Arduino environment is now down, and it's time to start making!  [Go back to the top](#table-of-contents) to find the next section you want to follow.
+</details>
 
-#### iOS
+<details open>
+<summary>
+iOS
+</summary>
+</br>
+
 > To Test on iOS, it is required to have a hardware device such as an iPhone or iPad.  Not all features will function using the XCode Simulator.  XCode is only available for MacOS.  To ensure best results, update to the latest version of MacOS and XCode.
 
 Download [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from the MacOS App Store and install.  Startup XCode to make sure everything is installed and running correctly.
@@ -242,22 +253,46 @@ Once you are in the correct directory, type the command:
 When the command completes and the frameworks are installed, open the **IoT DevKit.xcworkspace**.  It's very important to open workspace and not the project, as this could corrupt the frameworks.
 
 With the workspace open, connect your device, and click on Build and Run to install and debug the application on your device.
+</details>
 
-#### Android
+<details open>
+<summary>
+Android
+</summary>
+</br>
+
 To test on Android devices, download and install [Android Studio](https://developer.android.com/studio).  When installation is complete, open the project from Finder, Windows Explorer, or open the project within Android Studio.  Connect your device, and Build and Run.
 > If the build or gradle sync fails, change to Build Online mode
+</details>
 
-## Bluetooth
+<details open>
+<summary>
+Bluetooth
+</summary>
+</br>
+
 Running the Bluetooth application requires additional setup.  Just run the provided Mobile Application, and follow the [Arduino steps](#how-to-load-your-arduino-program) to load the co2meter_demo_ble Arduino Sketch.
+</details>
 
-## WiFi
+<details open>
+<summary>
+WiFi
+</summary>
+</br>
+
 To run the WiFi application, you need to update your WiFi SSID and Password in the Arduino Sketch.  
 
 ![wifi credentials](assets/wifi_creds.png)
 
 Once that is done, load the WiFi sketch using the [Arduino steps to load your Arduino Program](#how-to-load-your-arduino-program)
+</details>
 
-### WiFi Plotter
+<details open>
+<summary>
+WiFi Plotter
+</summary>
+</br>
+
 Included is a python application that will connect to the WiFi server, and to log data to a file and plot the data along the way.  Additionally, the python application can plot a data log that already exists, or retrieve and plot a log file from the data logger application with WiFi server wakeup.
 
 The application requires python3 and pip3 to install the requests and matplotlib modules.
@@ -308,9 +343,14 @@ The application is now ready to run by calling:
 ```
 python wifiplot.py -d logfile.csv -t 5
 ```
+</details>
 
+<details open>
+<summary>
+AWS IoT
+</summary>
+</br>
 
-## AWS IoT
 To demo the AWS IoT application, it's required to do some more setup.  Fist step is to follow the same steps as the [WiFi Application](#wifi) and update your WiFi credentials.  Follow the next steps or skip ahead as needed:
 1. [Create AWS Account](#create-aws-account)
 2. [Setup AWS IoT](#setup-aws-iot)
@@ -328,59 +368,59 @@ If you don't already have an AWS Account, it's free to [create and own](https://
 #### AWS IoT Service
 After logging in to your AWS Console, search for the IoT Core service and click.
 
-![iot core](assets/iot-core.png)
+<img title="IoT Core" alt="Alt text" src="/assets/iot-core.png"> <!--![iot core](assets/iot-core.png)-->
 
-![iot core home](assets/iot-core-home.png)
+<img title="IoT Core Home" alt="Alt text" src="/assets/iot-core-home.png"> <!--![iot core home](assets/iot-core-home.png)-->
 
 #### iOS Cognito
 If you plan on using the included iOS Demo application, it is required to create an AWS Cognito Identity Pool.
 > These steps only need to be followed if you plan to use the iOS Demo Application.  If you are only using Android, or Web Based, ignore this section
 
 From the AWS Console, search for services and type "cognito" in the searchbar.
-![cognito search](assets/cognito-search.png)
+<img title="Cognito Search" alt="Alt text" src="/assets/cognito-search.png"> <!--![cognito search](assets/cognito-search.png)-->
 
 In the Cognito Main Dashboard, select "Manage Identity Pools"
-![click identity pools](assets/click-ident-pools.png)
+<img title="Click Identity Pools" alt="Alt text" src="/assets/click-ident-pools.png"> <!--![click identity pools](assets/click-ident-pools.png)-->
 
 In the new Identity Pool Wizard, create a unique name for the Identity Pool, and select the Enable access to unauthenticated identities checkbox.
-![identity pool setup wizard](assets/ident-pool-wizard-page.png)
+<img title="Identity Pool Setup Wizard" alt="Alt text" src="/assets/ident-pool-wizard-page.png"> <!--![identity pool setup wizard](assets/ident-pool-wizard-page.png)-->
 
 Leave the prefilled options to Create a new IAM Role, and click on the "Allow" button.  Make a note of the Role name for the unauthenticated role, though they both should be very similar and based on the name of the Cognito Identity pool from the previous page.
-![create iam](assets/create-iam.png)
+<img title="Creat IAM" alt="Alt text" src="/assets/create-iam.png"> <!--![create iam](assets/create-iam.png)-->
 
 After clicking allow, make a note of the identity pool id and region.
-![pool id](assets/ident-pool-id.png)
+<img title="Pool ID" alt="Alt text" src="/assets/ident-pool-id.png"> <!--![pool id](assets/ident-pool-id.png)-->
 
 Next, head over to the AWS IAM Service.
-![iam search](assets/iam-search.png)
+<img title="IAM Search" alt="Alt text" src="/assets/iam-search.png"> <!--![iam search](assets/iam-search.png)-->
 
 From the IAM Dashboard, click on Roles
-![iam dash](assets/iam-dash.png)
+<img title="IAM Dash" alt="Alt text" src="/assets/iam-dash.png"> <!--![iam dash](assets/iam-dash.png)-->
 
 Find the role that you just created and click to view the options.  In the Role Summary, click on Attach Policies
-![attach policy](assets/attach-role-policy.png)
+<img title="Attach Policy" alt="Alt text" src="/assets/attach-role-policy.png"> <!--![attach policy](assets/attach-role-policy.png)-->
 
 In the search bar to filter policies, type:
 ```
 AWSIoTFullAccess
 ```
 and select the policy that shows up, and click "Attach Policy"
-![full access](assets/full-access.png)
+<img title="Full Access" alt="Alt text" src="/assets/full-access.png"> <!--![full access](assets/full-access.png)-->
 
 You're now all set to use iOS with AWS IoT Core
 
 #### Create Policy
 First thing we need to do in the AWS IoT Core is create a security policy.  This will be attached to your IoT Thing certificates and allows your device to communicate on the MQTT Channels and update your Thing Shadow.
 
-![iot policy sidebar](assets/iot_policies_sidebar.png)
+<img title="IoT Policy Sidebar" alt="Alt text" src="/assets/iot_policies_sidebar.png"> <!--![iot policy sidebar](assets/iot_policies_sidebar.png)-->
 
 From the Policies main page, we will create a new policy
 
-![policy home create](assets/policy-home.png)
+<img title="Policy Home Create" alt="Alt text" src="/assets/policies-home.png> <!--![policy home create](assets/policy-home.png)-->
 
 In the Create Policy Wizard, click on the "Advanced" button
 
-![policy create](assets/create-policy.png)
+<img title="Policy Create" alt="Alt text" src="/assets/create-policy.png"> <!--![policy create](assets/create-policy.png)-->
 
 Remove the current text, then copy and paste the following into the text box:
 ```json
@@ -405,38 +445,38 @@ Remove the current text, then copy and paste the following into the text box:
 }
 ```
 
-![policy advanced](assets/policy-advanced.png)
+<img title="Policy Advanced" alt="Alt text" src="/assets/policy-advanced.png"> <!--![policy advanced](assets/policy-advanced.png)-->
 
 Click create to complete the security policy
 
 #### Create and Register Thing
 Next step is create and register our DevKit as an AWS IoT Thing.  Go to the Manage->Things in the IoT Core Sidebar
 
-![things sidebar](assets/things-sidebar.png)
+<img title="Things Sidebar" alt="Alt text" src="/assets/things-sidebar.png"> <!--![things sidebar](assets/things-sidebar.png)-->
 
 From the Things Home Page, click the Create button
 
-![create thing](assets/thing-home.png)
+<img title="Create Thing" alt="Alt text" src="/assets/thing-home.png"> <!--![create thing](assets/thing-home.png)-->
 
 For our purposes, we will create a Single Thing
 
-![create single thing](assets/create-single-thing.png)
+<img title="Create Single Thing" alt="Alt text" src="/assets/create-single-thing.png"> <!--![create single thing](assets/create-single-thing.png)-->
 
 Fill out the Thing Registration Form
 
-![thing form](assets/thing-form.png)
+<img title="Thing Form" alt="Alt text" src="/assets/thing-form.png"> <!--![thing form](assets/thing-form.png)-->
 
 Next, follow Amazon's recommendation and do a One-Click certificate creation
 
-![one click](assets/one-click.png)
+<img title="One Click" alt="Alt text" src="/assets/one-click.png"> <!--![one click](assets/one-click.png)-->
 
 Next activate and download the newly created certificates.  You will also need to download the Amazon Root Certificate.  You can follow the links provided on the page, or you can go [here](https://www.amazontrust.com/repository/AmazonRootCA1.pem).
 
 Next, attach the policy and Register Thing
 
-![click attach](assets/click-attach.png)
+<img title="Click Attach" alt="Alt text" src="/assets/click-attach.png"> <!--![click attach](assets/click-attach.png)-->
 
-![attach policy](assets/attach-policy.png)
+<img title="Attach Policy" alt="Alt text" src="/assets/attach-policy.png"> <!--![attach policy](assets/attach-policy.png)-->
 
 Now your Thing is created!
 
@@ -445,7 +485,7 @@ Included in the project folder, is a file named certs.h.
 
 Copy and paste in your certificate and add \n\ at the end of each line similar to the image:
 
-![cert example](assets/cert-example.png)
+<img title="Cert Example" alt="Alt text= src="/assets/cert-example.png"> <!--![cert example](assets/cert-example.png)-->
 
 ### Update Sketch
 In the AWS IoT Settings, write down the IoT endpoint:
@@ -561,3 +601,4 @@ Now publish to the Update Shadow topic: `$aws/things/co2-sensor/shadow/update` a
 ![shadow updated](assets/shadow-updated.png)
 
 If issues still arise, delete the Thing and start over in the [AWS IoT](#aws-iot) section.
+</details>
