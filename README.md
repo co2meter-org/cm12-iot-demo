@@ -12,11 +12,13 @@
 7. [AWS IoT]<!--(#aws-iot)-->
 8. [Troubleshooting]<!--(#troubleshooting)-->
 
-## <details open>
-<summary>Getting to Know Your DevKit</summary>
+<details open>
+<summary>
+## Getting to Know Your DevKit 
+</summary>
 <br>
-![DevKit](assets/devkit_image.jpeg)
-> The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
+<img title= "DevKit" alt="Alt Text" src="/assets/devkit_image.jpeg"> <!--![DevKit](assets/devkit_image.jpeg)-->
+The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
 
 
 #### ESP32-WROOM
