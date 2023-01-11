@@ -17,7 +17,7 @@
 <br>
 ![DevKit](assets/devkit_image.jpeg)
 > The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
-</details>
+
 
 #### ESP32-WROOM
 The CO2Meter IoT DevKit comes with a standard ESP32-WROOM with dual-core processor, on-board WiFi and Bluetooth with a built-in antenna.  ESP32 can programmed using [ESP-IDF](https://github.com/espressif/esp-idf), or using the [Arduino Library](https://github.com/espressif/arduino-esp32).
@@ -57,6 +57,7 @@ You have available a standard push button that is connected to the ESP32 GPIO Pi
 
 #### Sensor Connectors
 Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors.
+</details>
 
 ## Downloading the Code and Repo
 To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
