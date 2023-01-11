@@ -1,23 +1,16 @@
 # CO2Meter IoT Development Kit
 
 ## Table of Contents
-1. [Getting To Know Your DevKit](#Getting To Know Your DevKit)
-2. [Downloading The Code and Repo](#Downloading The Code and Repo)
-3. [General Setup](#general-setup)
-4. [Mobile Setup](#mobile setup instructions)
-  - [iOS](#ios)
-  - [Android](#android)
-5. [Bluetooth](#bluetooth)
-6. [WiFi](#wifi)
-7. [AWS IoT](#aws-iot)
-8. [Troubleshooting](#troubleshooting)
-
-## Downloading the Code and Repo
-To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
-
-![download repo](assets/download-repo.png)
-
-Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
+1. [Getting To Know Your DevKit] <!--(#Getting To Know Your DevKit)-->
+2. [Downloading The Code and Repo]<!--(#Downloading The Code and Repo)-->
+3. [General Setup]<!--(#general-setup)-->
+4. [Mobile Setup]<!--(#mobile setup instructions)>
+  - [iOS]<!--(#ios)-->
+  - [Android]<!--(#android)-->
+5. [Bluetooth]<!--(#bluetooth)-->
+6. [WiFi]<!--(#wifi)-->
+7. [AWS IoT]<!--(#aws-iot)-->
+8. [Troubleshooting]<!--(#troubleshooting)-->
 
 ## Getting to Know Your DevKit
 ![DevKit](assets/devkit_image.jpeg)
@@ -62,13 +55,22 @@ You have available a standard push button that is connected to the ESP32 GPIO Pi
 #### Sensor Connectors
 Connectors for the 9-pin S11 Connector and the 12-pin Cozir LP Blink CO2 Sensors.
 
+## Downloading the Code and Repo
+To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
+
+![download repo](assets/download-repo.png)
+
+Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
+
 ## General Setup
-#### Arduino
+###Windows Setup
+
+#### Download Arduino IDE
 To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.  
 
 You then need to install the ESP32 boards in the Board Manager:
 > If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#macOS)
-#### Windows:
+
 Click File->Preferences
 
 ![open preferences](assets/arduino-ide-open-preferences.png)
@@ -93,7 +95,7 @@ Once you finished the installation, you will see a new set of boards available t
 
 You can now skip to the [Libraries Section Here](#libraries)
 
-#### MacOS General Setup:
+### MacOS General Setup:
 Click Arduino->Preferences
 
 ![mac open preferences](assets/mac-open-preferences.png)
