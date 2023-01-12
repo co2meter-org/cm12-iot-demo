@@ -90,29 +90,28 @@ Windows General Setup
 To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.  
 
 You then need to install the ESP32 boards in the Board Manager:
-<!--> If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#macOS)-->
 
 Click File->Preferences
 
-<img title="Open Preferences" alt="Alt text" src="/assets/arduino-ide-open-preferences.png"> <!--![open preferences](assets/arduino-ide-open-preferences.png)-->
+<img title="Open Preferences" alt="Alt text" src="/assets/WindowsPrefernces.png"> <!--![open preferences](assets/arduino-ide-open-preferences.png)-->
 
 Then enter the url below into section labeled "Additional Boards Manager URLs:"
 ```
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
 
-<img title="Preferences" alt="Alt text" src="/assets/preferences.png"> <!--![preferences](assets/preferences.png)-->
+<img title="Preferences" alt="Alt text" src="/assets/AdditionalBoard.png"> <!--![preferences](assets/preferences.png)-->
 
 After Clicking the OK button, go to the Boards Manager
 
-<img title="Boards Manager" alt="Alt text" src="/assets/boardsManager.png"> <!--![boards manager](assets/boardsManager.png)-->
+<img title="Boards Manager" alt="Alt text" src="/assets/WindowsBoardManager.png"> <!--![boards manager](assets/boardsManager.png)-->
 
 Search for the ESP32 and click on the Install button
 
-<img title="Install" alt="Alt text' src="/assets/installing.png"> <!--![install](assets/installing.png)-->
+<img title="Install" alt="Alt text" src="/assets/ESP32Install.png"> <!--![install](assets/installing.png)-->
 
 Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
-<img title="Select ESP32 Dev Module" alt="Alt text" src="/assets/win-select-esp32-dev-module.png"> <!--![select esp32 dev module](assets/win-select-esp32-dev-module.png)-->
+<img title="Select ESP32 Dev Module" alt="Alt text" src="/assets/SelectESP32.png"> <!--![select esp32 dev module](assets/win-select-esp32-dev-module.png)-->
 
 ## Install Libraries:
 There are multiple libraries that are required to compile and run the Arduino applications.  Some of which are downloaded, and others can be installed from the Libraries Manager.
