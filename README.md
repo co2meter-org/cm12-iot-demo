@@ -90,7 +90,7 @@ Windows General Setup
 To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.  
 
 You then need to install the ESP32 boards in the Board Manager:
-> If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#macOS)
+<!--> If you have a Windows PC, continue, if you have MacOS you can [skip to the Mac Section here](#macOS)-->
 
 Click File->Preferences
 
@@ -114,7 +114,61 @@ Search for the ESP32 and click on the Install button
 Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
 <img title="Select ESP32 Dev Module" alt="Alt text" src="/assets/win-select-esp32-dev-module.png"> <!--![select esp32 dev module](assets/win-select-esp32-dev-module.png)-->
 
-You can now skip to the [Libraries Section Here](#libraries)
+## Install Libraries:
+There are multiple libraries that are required to compile and run the Arduino applications.  Some of which are downloaded, and others can be installed from the Libraries Manager.
+
+##### MQTT:
+The Arduino project requires an MQTT library that can be installed directly through Arduino IDE.  Go to the Manage Libraries in Sketch->Include Library->Manage Libraries
+<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> <!--![manage libraries](assets/arduino-manage-libraries.png)-->
+
+In the search bar, type
+```
+mqtt
+```
+Find the MQTT library, and install
+<img title="MQTT Library" alt="Alt text" src="/assets/install-mqtt.png"> <!--![mqtt library](assets/install-mqtt.png)-->
+
+##### Adafruit-BME280
+Allows sensor to read Temperature, Pressure, and Relative Humidity.
+
+In Arduino, go to Sketch->Include Library->Manager Library->Filter Your Search->Type in Adafruit-BME280->Install
+<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> <!--![manage libraries](assets/arduino-manage-libraries.png)-->
+Search for, and install the Adafruit BME280 Library
+<img title="Install BME280" alt="Alt text" src="/assets/install-bme280.png"> <!--![install bme280](assets/install-bme280.png)-->
+
+##### Adafruit Unified Sensor
+The Adafruit BME280 has a dependency with the Adafruit Unified Sensor library, so that library also needs to be installed.
+
+While still in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
+<img title="Install BusIO" alt="Alt text" src="/assets/install-unified-sensor.png"> <!--![install busio](assets/install-unified-sensor.png)-->
+
+##### Adafruit BusIO
+The Adafruit Unified Sensor has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
+
+While sitll in the Manage Libraries window, search for, and install the Adafruit BusIO Library
+<img title="Install BusIO" alt="Alt text" src="/assets/install-busio.png"> <!--![install busio](assets/install-busio.png)-->
+
+##### ESPAsyncWebServer:
+Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the Green "Code" button, then click the "Download Zip" button and save it as a zip file.
+<img title="Download Async" alt="Alt text" src="/assets/download-esp-async.png"> <!--![download async](assets/download-esp-async.png)-->
+
+When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
+<img title="Add Zip" alt="Alt text" src="assets/add-zip-library.png"> <!--![add zip](assets/add-zip-library.png)-->
+
+Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-master.zip" and Click "Choose"
+
+##### AsyncTCP
+ESPAsyncWebServer has a dependency that also needs to be installed [AsyncTCP](https://github.com/me-no-dev/AsyncTCP).
+
+To install this library into your Arduino IDE, go the [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) and download the project zip file.
+<img title="Download Async" alt="Alt text" src="/assets/download-asynctcp.png"> <!--![download async](assets/download-asynctcp.png)-->
+
+When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
+<img title="Add Zip" alt="Alt text" src="/assets/add-zip-library.png"> <!--![add zip](assets/add-zip-library.png)-->
+
+Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
+
+<!--You can now skip to the [Libraries Section Here](#libraries)-->
 </details>
 
 <details>
@@ -122,6 +176,11 @@ You can now skip to the [Libraries Section Here](#libraries)
 MacOS General Setup:
 </summary>
 </br>
+
+#### Download Arduino IDE
+To quickly start programming your CO2Meter IoT DevKit, we have provided 3 different Arduino programs for each of the sensors available, the Senseair S11 and CozIR LP2 Blink.  To get started, you will need to download the [Arduino IDE](https://www.arduino.cc/en/main/software), then run and install the IDE, if you haven't already.
+
+You then need to install the ESP32 boards in the Board Manager:
 
 Click Arduino->Preferences
 
@@ -147,7 +206,7 @@ Once you finished the installation, you will see a new set of boards available t
 
 <img title="Selected Board" alt= "Alt text" src="/assets/mac-board-selected.png"> <!--![selected board](assets/mac-board-selected.png)-->
 
-#### Libraries:
+## Install Libraries:
 There are multiple libraries that are required to compile and run the Arduino applications.  Some of which are downloaded, and others can be installed from the Libraries Manager.
 
 ##### MQTT:
