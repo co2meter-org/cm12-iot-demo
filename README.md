@@ -119,34 +119,35 @@ There are multiple libraries that are required to compile and run the Arduino ap
 
 ##### MQTT:
 The Arduino project requires an MQTT library that can be installed directly through Arduino IDE.  Go to the Manage Libraries in Sketch->Include Library->Manage Libraries
-<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> 
+<img title="GetToMQTT" alt="Alt text" src="/assets/GetToMQTT.png"	> 
 
 In the search bar, type
 ```
 mqtt
 ```
 Find the MQTT library, and install
-<img title="MQTT Library" alt="Alt text" src="/assets/install-mqtt.png"> 
+<img title="MQTT Library" alt="Alt text" src="/assets/MQTTLibrary.png"> 
 
 ##### Adafruit-BME280
 Allows sensor to read Temperature, Pressure, and Relative Humidity.
 
 In Arduino, go to Sketch->Include Library->Manager Library->Filter Your Search->Type in Adafruit-BME280->Install
-<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> 
+<img title="GetToAdafruit.png" alt="Alt text" src="/assets/GetToAdafruit.png"> 
+
 Search for, and install the Adafruit BME280 Library
-<img title="Install BME280" alt="Alt text" src="/assets/install-bme280.png"> 
+<img title="AdafruitBME280" alt="Alt text" src="/assets/AdafruitBME280.png"> 
 
 ##### Adafruit Unified Sensor
 The Adafruit BME280 has a dependency with the Adafruit Unified Sensor library, so that library also needs to be installed.
 
 While still in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
-<img title="Install BusIO" alt="Alt text" src="/assets/install-unified-sensor.png"> 
+<img title="AdafruitUnifiedSensor" alt="Alt text" src="/assets/AdafruitUnifiedSensor.png"> 
 
 ##### Adafruit BusIO
 The Adafruit Unified Sensor has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
 
 While sitll in the Manage Libraries window, search for, and install the Adafruit BusIO Library
-<img title="Install BusIO" alt="Alt text" src="/assets/install-busio.png"> 
+<img title="AdafruitBusIO" alt="Alt text" src="/assets/AdafruitBusIO.png"> 
 
 ##### ESPAsyncWebServer:
 Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the Green "Code" button, then click the "Download Zip" button and save it as a zip file.
