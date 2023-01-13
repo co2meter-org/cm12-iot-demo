@@ -93,33 +93,33 @@ You then need to install the ESP32 boards in the Board Manager:
 
 Click File->Preferences
 
-<img title="WindowsPreferences" alt="Alt text" src="/assets/WindowsPrefernces.png"> <!--![open preferences](assets/arduino-ide-open-preferences.png)-->
+<img title="WindowsPreferences" alt="Alt text" src="/assets/WindowsPrefernces.png"> 
 
 Then enter the url below into section labeled "Additional Boards Manager URLs:"
 ```
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
 
-<img title="AdditionalBoard" alt="Alt text" src="/assets/AdditionalBoard.png"> <!--![preferences](assets/preferences.png)-->
+<img title="AdditionalBoard" alt="Alt text" src="/assets/AdditionalBoard.png"> 
 
 After Clicking the OK button, go to the Boards Manager
 
-<img title="WindowsBoardManager" alt="Alt text" src="/assets/WindowsBoardManager.png"> <!--![boards manager](assets/boardsManager.png)-->
+<img title="WindowsBoardManager" alt="Alt text" src="/assets/WindowsBoardManager.png"> 
 
 Search for the ESP32 and click on the Install button
 
-<img title="ESP32Install" alt="Alt text" src="/assets/ESP32Install.png"> <!--![install](assets/installing.png)-->
+<img title="ESP32Install" alt="Alt text" src="/assets/ESP32Install.png"> 
 
 Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
 
-<img title="SelectESP32" alt="Alt text" src="/assets/SelectESP32.png"> <!--![select esp32 dev module](assets/win-select-esp32-dev-module.png)-->
+<img title="SelectESP32" alt="Alt text" src="/assets/SelectESP32.png"> 
 
 ## Install Libraries:
 There are multiple libraries that are required to compile and run the Arduino applications.  Some of which are downloaded, and others can be installed from the Libraries Manager.
 
 ##### MQTT:
 The Arduino project requires an MQTT library that can be installed directly through Arduino IDE.  Go to the Manage Libraries in Sketch->Include Library->Manage Libraries
-<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> <!--![manage libraries](assets/arduino-manage-libraries.png)-->
+<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> 
 
 In the search bar, type
 ```
@@ -192,19 +192,19 @@ https://dl.espressif.com/dl/package_esp32_index.json
 ```
 into the Additional Boards Manager URLs Text Box
 
-<img title="Mac Preferences" alt="Alt text" src="/assets/mac-preferences.png"> <!--![mac preferences](assets/mac-preferences.png)-->
+<img title="Mac Preferences" alt="Alt text" src="/assets/mac-preferences.png"> 
 
 After Clicking the OK button, go to the Boards Manager and search for esp32 and install
 
-img title="Boards Manager Menu" alt="Alt text" src="/assets/mac-boards-manager-menu.png"> <!--![boards manager menu](assets/mac-boards-manager-menu.png)-->
+img title="Boards Manager Menu" alt="Alt text" src="/assets/mac-boards-manager-menu.png"> 
 
 Search for ESP32 and click on the Install button
 
-<img title="Boards Manager" alt="Alt text" src="/assets/mac-boards-manager.png"> <!--![boards manager](assets/mac-boards-manager.png)-->
+<img title="Boards Manager" alt="Alt text" src="/assets/mac-boards-manager.png"> 
 
 Once you finished the installation, you will see a new set of boards available to select.  Select the ESP32 Dev Module
 
-<img title="Selected Board" alt= "Alt text" src="/assets/mac-board-selected.png"> <!--![selected board](assets/mac-board-selected.png)-->
+<img title="Selected Board" alt= "Alt text" src="/assets/mac-board-selected.png"> 
 
 ## Install Libraries:
 There are multiple libraries that are required to compile and run the Arduino applications.  Some of which are downloaded, and others can be installed from the Libraries Manager.
