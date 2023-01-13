@@ -131,7 +131,7 @@ Find the MQTT library, and install
 ##### Adafruit-BME280
 Allows sensor to read Temperature, Pressure, and Relative Humidity.
 
-In Arduino, go to Sketch->Include Library->Manage Libraries->
+In Arduino, go to Sketch->Include Library->Manage Libraries
 <img title="GetToAdafruit.png" alt="Alt text" src="/assets/GetToAdafruit.png"> 
 
 Search for, and install the Adafruit BME280 Library
@@ -154,7 +154,7 @@ Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local we
 <img title="Download Async" alt="Alt text" src="/assets/download-esp-async.png"> 
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
-<img title="Add Zip" alt="Alt text" src="assets/add-zip-library.png"> 
+<img title="AddZipLibrary" alt="Alt text" src="assets/AddZipLibrary.png"> 
 
 Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-master.zip" and Click "Choose"
 
@@ -165,7 +165,7 @@ To install this library into your Arduino IDE, go the [AsyncTCP](https://github.
 <img title="Download Async" alt="Alt text" src="/assets/download-asynctcp.png"> 
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
-<img title="Add Zip" alt="Alt text" src="/assets/add-zip-library.png"> 
+<img title="AddZipLibrary" alt="Alt text" src="/assets/AddZipLibrary.png"> 
 
 Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
 
