@@ -19,7 +19,7 @@
 Getting to Know Your DevKit 
 </summary>
 <br>
-<img title= "DevKit" alt="Alt Text" src="/assets/devkit_image.jpeg"> <!--![DevKit](assets/devkit_image.jpeg)-->
+<img title= "DevKit" alt="Alt Text" src="/assets/devkit_image.jpeg"> 
 The CO2Meter IoT DevKit is a hardware development board with a built-in WiFi / Bluetooth microcontroller, a voltage regulator and external LiPol battery, battery recharge circuit, and two sets of headers for the ESP32 GPIO Header, or an external sensor header.
 
 
@@ -71,7 +71,7 @@ Downloading the Code and Repo
 
 To use the code included in this repository, download this repo by clicking on the Green "Code" button above, and click on "Download Zip File"
 
-<img title="Download Repo" alt="Alt text" src="/assets/download-repo.png"> <!--![download repo](assets/download-repo.png)-->
+<img title="Download Repo" alt="Alt text" src="/assets/download-repo.png"> 
 
 
 Unzip the file, you now have all the Code for Arduino Sketches, XCode Projects(MacOS), Android Studio Projects and Python Scripts.
@@ -93,7 +93,7 @@ You then need to install the ESP32 boards in the Board Manager:
 
 Click File->Preferences
 
-<img title="WindowsPreferences" alt="Alt text" src="/assets/WindowsPrefernces.png"> 
+<img title="WindowsPreferences" alt="Alt text" src="/assets/WindowsPreferences.png"> 
 
 Then enter the url below into section labeled "Additional Boards Manager URLs:"
 ```
@@ -126,34 +126,34 @@ In the search bar, type
 mqtt
 ```
 Find the MQTT library, and install
-<img title="MQTT Library" alt="Alt text" src="/assets/install-mqtt.png"> <!--![mqtt library](assets/install-mqtt.png)-->
+<img title="MQTT Library" alt="Alt text" src="/assets/install-mqtt.png"> 
 
 ##### Adafruit-BME280
 Allows sensor to read Temperature, Pressure, and Relative Humidity.
 
 In Arduino, go to Sketch->Include Library->Manager Library->Filter Your Search->Type in Adafruit-BME280->Install
-<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> <!--![manage libraries](assets/arduino-manage-libraries.png)-->
+<img title="Manage Libraries" alt="Alt text" src="/assets/arduino-manage-libraries.png"> 
 Search for, and install the Adafruit BME280 Library
-<img title="Install BME280" alt="Alt text" src="/assets/install-bme280.png"> <!--![install bme280](assets/install-bme280.png)-->
+<img title="Install BME280" alt="Alt text" src="/assets/install-bme280.png"> 
 
 ##### Adafruit Unified Sensor
 The Adafruit BME280 has a dependency with the Adafruit Unified Sensor library, so that library also needs to be installed.
 
 While still in the Manage Libraries window, search for, and install the Adafruit Unified Sensor Library
-<img title="Install BusIO" alt="Alt text" src="/assets/install-unified-sensor.png"> <!--![install busio](assets/install-unified-sensor.png)-->
+<img title="Install BusIO" alt="Alt text" src="/assets/install-unified-sensor.png"> 
 
 ##### Adafruit BusIO
 The Adafruit Unified Sensor has a dependency with the Adafruit BusIO library, so that library also needs to be installed.
 
 While sitll in the Manage Libraries window, search for, and install the Adafruit BusIO Library
-<img title="Install BusIO" alt="Alt text" src="/assets/install-busio.png"> <!--![install busio](assets/install-busio.png)-->
+<img title="Install BusIO" alt="Alt text" src="/assets/install-busio.png"> 
 
 ##### ESPAsyncWebServer:
 Multiple Arduino sketches use the ESPAsyncWebServer library to act as a local web server.  To install this library into your Arduino IDE, go the [ESPAsyncWebServer GitHub Repository](https://github.com/me-no-dev/ESPAsyncWebServer) and download the project by clicking on the Green "Code" button, then click the "Download Zip" button and save it as a zip file.
-<img title="Download Async" alt="Alt text" src="/assets/download-esp-async.png"> <!--![download async](assets/download-esp-async.png)-->
+<img title="Download Async" alt="Alt text" src="/assets/download-esp-async.png"> 
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
-<img title="Add Zip" alt="Alt text" src="assets/add-zip-library.png"> <!--![add zip](assets/add-zip-library.png)-->
+<img title="Add Zip" alt="Alt text" src="assets/add-zip-library.png"> 
 
 Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-master.zip" and Click "Choose"
 
@@ -161,14 +161,14 @@ Navigate to your downloads folder, locate the zip file named "ESPAsyncWebServer-
 ESPAsyncWebServer has a dependency that also needs to be installed [AsyncTCP](https://github.com/me-no-dev/AsyncTCP).
 
 To install this library into your Arduino IDE, go the [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) and download the project zip file.
-<img title="Download Async" alt="Alt text" src="/assets/download-asynctcp.png"> <!--![download async](assets/download-asynctcp.png)-->
+<img title="Download Async" alt="Alt text" src="/assets/download-asynctcp.png"> 
 
 When the download is completed, add the zip library into Arduino IDE by going to Sketch->Include Library->Add .ZIP Library
-<img title="Add Zip" alt="Alt text" src="/assets/add-zip-library.png"> <!--![add zip](assets/add-zip-library.png)-->
+<img title="Add Zip" alt="Alt text" src="/assets/add-zip-library.png"> 
 
 Navigate to your downloads folder, locate the zip file named "AsyncTCP-master.zip" and Click "Open"
 
-<!--You can now skip to the [Libraries Section Here](#libraries)-->
+
 </details>
 
 <details>
