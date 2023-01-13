@@ -131,7 +131,7 @@ Find the MQTT library, and install
 ##### Adafruit-BME280
 Allows sensor to read Temperature, Pressure, and Relative Humidity.
 
-In Arduino, go to Sketch->Include Library->Manager Library->Filter Your Search->Type in Adafruit-BME280->Install
+In Arduino, go to Sketch->Include Library->Manage Libraries->
 <img title="GetToAdafruit.png" alt="Alt text" src="/assets/GetToAdafruit.png"> 
 
 Search for, and install the Adafruit BME280 Library
